@@ -38,10 +38,109 @@ form{
 }
 
 .group-input{
-    position: relative;
-    border-bottom: 2px solid var(--gray);
-    margin: 30px 0;
+position: relative;
+border-bottom: 2px solid var(--gray);
+margin: 30px 0;
 }
 
 
 
+.group-input input{
+    position: relative;
+    border-bottom: 2px solid var(--gray);
+    margin: 30px 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.group-input label{
+    position: absolute;
+   top: 50%;
+    left: 0;
+    transform: translateY(-50%);  
+    font-size: 16px;
+    pointer-events: none;
+    transition: top 0.2s ease-in,
+                color 0.2s ease-in;
+}
+
+.group-input span::before{
+    content: " ";
+    position:absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: none;
+    background: var(--purle);
+    transition: width 0.2s ease-in-out;
+}
+
+.group-input input:focus ~label, 
+.groupe-input input:valid ~label{
+  
+    color: var(--purle);
+    top: -5px;
+
+}
+
+.group-input input:focus ~span::before, 
+.groupe-input input:valid ~span::before{
+  
+    width: 100%;
+
+}
+
+.mdp{
+    display: inline-block;
+    margin: -5px 0 16px 5px;
+    color: var(--purle);
+    font-size: italic;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.mdp:hover{
+    color: var(--purle) ;
+    text-decoration: underline;
+
+}
+
+input[type="submit"]{
+    display: block;
+    width: 50%;
+    background: var(--purle);
+    border-radius: 25px;  
+    font-size: 18px;
+    color: var(--white);  
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin: 1rem auto;
+    transition: border 0.2s ease-in-out,
+                color 0.2s ease-in-out,
+                background 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover{
+    border: 5px solid var(--purle);
+    color: var(--purle);
+    background: none;
+}
+.compte {
+    margin:30px 0 ;
+    text-align: center;
+    font-size: 16px;
+    color:var(--gray)
+}
+
+.compte a {
+    color: var(--purle);
+    text-decoration: none;
+}
+
+.compte a:hover{
+    text-decoration: underline;
+}
